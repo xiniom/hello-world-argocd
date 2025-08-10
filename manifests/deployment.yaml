@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: hello-world-argocd-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: hello-world-argocd
   template:
     metadata:
       labels:
-        app: my-app
+        app: hello-world-argocd
     spec:
       containers:
-      - name: my-app-container
+      - name: hello-world-argocd-container
         image: nginxdemos/hello:plain-text
         ports:
         - containerPort: 80
